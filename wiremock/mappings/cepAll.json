@@ -1,0 +1,28 @@
+{
+    "request": {    
+        "method": "GET",
+        "urlPattern": "/([0-9]{8})\\/json"
+    },
+    
+    "response": {
+        "status": 200,
+        "jsonBody": {
+            "cep": "cep",
+            "logradouro": "logradouro",
+            "complemento": "complemento",
+            "unidade": "unidade",
+            "bairro": "bairro",
+            "localidade": "localidade",
+            "uf": "uf",
+            "estado": "estado",
+            "regiao": "regiao",
+            "ibge": "ibge",
+            "gia": "gia",
+            "ddd": "ddd",
+            "siafi": "siafi"
+          },
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}

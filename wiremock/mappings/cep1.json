@@ -1,0 +1,28 @@
+{
+    "request": {    
+        "method": "GET",
+        "url": "/04543011/json"
+    },
+    
+    "response": {
+        "status": 200,
+        "jsonBody": {
+            "cep": "04543-011",
+            "logradouro": "Avenida Presidente Juscelino Kubitschek",
+            "complemento": "de 953 ao fim - lado ímpar",
+            "unidade": "",
+            "bairro": "Vila Nova Conceição",
+            "localidade": "São Paulo",
+            "uf": "SP",
+            "estado": "São Paulo",
+            "regiao": "Sudeste",
+            "ibge": "3550308",
+            "gia": "1004",
+            "ddd": "11",
+            "siafi": "7107"
+          },
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}

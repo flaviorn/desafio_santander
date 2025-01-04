@@ -1,0 +1,150 @@
+<mxfile host="65bd71144e">
+    <diagram id="rDIyZCCT8kJwSnAD4rDu" name="Page-1">
+        <mxGraphModel dx="1575" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1333" pageHeight="833" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Requisitos:&lt;br&gt;- Realizar operação de busca de cep (api externa mockada);&lt;br&gt;- Logs das consultas precisam ser gravadas (Com horario e dados em banco);&lt;br&gt;- Conceitos do SOLID;&lt;br&gt;- Java 11 ou +;&lt;br&gt;- Utilizar Docker;&lt;br&gt;- AWS" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="420" y="10" width="450" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Chama lambda" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=14;fontColor=#FFFFFF;startArrow=classic;startFill=1;" parent="1" source="4" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Api Gateway" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#FFFFFF;gradientColor=#FF4F8B;gradientDirection=north;fillColor=#BC1356;strokeColor=#ffffff;dashed=0;verticalLabelPosition=top;verticalAlign=bottom;align=center;html=1;fontSize=14;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.api_gateway;labelPosition=center;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="241" width="78" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" style="edgeStyle=none;html=1;startArrow=classic;startFill=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="26" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="260" y="300" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="155" y="300"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" value="/viacep" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontStyle=1" parent="11" vertex="1" connectable="0">
+                    <mxGeometry x="0.6541" y="2" relative="1" as="geometry">
+                        <mxPoint x="-8" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" value="Chama mock do &lt;br&gt;Api Gateway" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#FFFFFF;" parent="11" vertex="1" connectable="0">
+                    <mxGeometry x="-0.6541" y="-1" relative="1" as="geometry">
+                        <mxPoint x="-6" y="-3" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" style="edgeStyle=none;html=1;fontSize=14;fontColor=#FFFFFF;startArrow=classic;startFill=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="5" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Verifica se CEP&lt;br&gt;&amp;nbsp;ja existe" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#FFFFFF;" parent="19" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1613" y="2" relative="1" as="geometry">
+                        <mxPoint x="10" y="-17" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=none;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=14;fontColor=#FFFFFF;startArrow=classic;startFill=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="5" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Se não existir, &lt;br&gt;armazena&amp;nbsp;novo CEP&lt;br&gt;&amp;nbsp;obtido na API" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#FFFFFF;" parent="20" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1852" y="1" relative="1" as="geometry">
+                        <mxPoint x="16" y="33" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5" value="Aplicacao Java" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#d5dbe2;gradientColor=#F78E04;gradientDirection=north;fillColor=#D05C17;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=14;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="430" width="78" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Dynamo" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#FFFFFF;gradientColor=#4D72F3;gradientDirection=north;fillColor=#3334B9;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=14;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.dynamodb;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="430" width="78" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" style="edgeStyle=none;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;" parent="1" source="7" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="/cep" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontStyle=1" parent="8" vertex="1" connectable="0">
+                    <mxGeometry x="0.3572" y="-1" relative="1" as="geometry">
+                        <mxPoint x="-15" y="-1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="230" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="ViaCep&lt;br&gt;&lt;span style=&quot;color: lab(69.608 -0.0000298023 0); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12.96px; background-color: rgba(29, 78, 216, 0.05);&quot;&gt;// https://viacep.com.br/ws/01001000/json/&lt;/span&gt;&lt;br&gt;&lt;div style=&quot;color: rgb(204, 204, 204); font-family: &amp;quot;Droid Sans Mono&amp;quot;, &amp;quot;monospace&amp;quot;, monospace; line-height: 19px;&quot;&gt;&lt;div style=&quot;&quot;&gt;{&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &quot;cep&quot;: &quot;01001-000&quot;,&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &quot;logradouro&quot;: &quot;Praça da Sé&quot;,&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &quot;complemento&quot;: &quot;lado ímpar&quot;,&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &quot;bairro&quot;: &quot;Sé&quot;,&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &quot;localidade&quot;: &quot;São Paulo&quot;,&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &quot;uf&quot;: &quot;SP&quot;,&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &quot;ibge&quot;: &quot;3550308&quot;,&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &quot;gia&quot;: &quot;1004&quot;,&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &quot;ddd&quot;: &quot;11&quot;,&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &quot;siafi&quot;: &quot;7107&quot;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;}&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="560" width="350" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" style="edgeStyle=none;html=1;fontSize=14;fontColor=#e6e8ea;startArrow=classic;startFill=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.043;entryY=0.286;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="31" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="998" y="257.1600000000001" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="36" value="&lt;span style=&quot;color: rgb(255, 255, 255);&quot;&gt;Verifica se CEP&lt;/span&gt;&lt;br style=&quot;color: rgb(255, 255, 255);&quot;&gt;&lt;span style=&quot;color: rgb(255, 255, 255);&quot;&gt;&amp;nbsp;ja existe&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#e6e8ea;" parent="32" vertex="1" connectable="0">
+                    <mxGeometry x="0.3112" y="3" relative="1" as="geometry">
+                        <mxPoint x="-29" y="-14" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="33" style="edgeStyle=none;html=1;entryX=-0.014;entryY=0.714;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=14;fontColor=#e6e8ea;startArrow=classic;startFill=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" target="31" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="998" y="296.1600000000001" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="37" value="&lt;span style=&quot;color: rgb(255, 255, 255);&quot;&gt;Se não existir,&lt;/span&gt;&lt;br style=&quot;color: rgb(255, 255, 255);&quot;&gt;&lt;span style=&quot;color: rgb(255, 255, 255);&quot;&gt;armazena&amp;nbsp;novo CEP&lt;/span&gt;&lt;br style=&quot;color: rgb(255, 255, 255);&quot;&gt;&lt;span style=&quot;color: rgb(255, 255, 255);&quot;&gt;&amp;nbsp;obtido na API&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#e6e8ea;" parent="33" vertex="1" connectable="0">
+                    <mxGeometry x="0.2514" y="-4" relative="1" as="geometry">
+                        <mxPoint x="-25" y="23" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="28" style="edgeStyle=none;html=1;fontSize=14;fontColor=#e6e8ea;startArrow=classic;startFill=1;" parent="1" source="25" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="920" y="276.6600000000001" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="25" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+                    <mxGeometry x="770" y="246.66" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="" style="edgeStyle=none;html=1;fontSize=14;fontColor=#e6e8ea;startArrow=classic;startFill=1;" parent="1" source="26" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.008;entryY=0.527;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=14;fontColor=#e6e8ea;startArrow=classic;startFill=1;dashed=1;dashPattern=8 8;" parent="1" source="26" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="230" y="697"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="26" value="ViaCep" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=api;labelBackgroundColor=none;fontSize=14;fontColor=#e6e8ea;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="435" width="70" height="68" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="Banco MySQL" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/databases/Azure_Database_MySQL_Server.svg;labelBackgroundColor=none;fontColor=#e6e8ea;" parent="1" vertex="1">
+                    <mxGeometry x="1170" y="230" width="70" height="93.33" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" style="edgeStyle=none;html=1;fontSize=14;fontColor=#e6e8ea;startArrow=classic;startFill=1;" parent="1" source="35" target="38" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="Chama&lt;br&gt;Wiremock" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#e6e8ea;" parent="39" vertex="1" connectable="0">
+                    <mxGeometry x="0.2541" y="1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="35" value="Aplicacao Spring" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/compute/Azure_Spring_Cloud.svg;labelBackgroundColor=none;fontColor=#e6e8ea;labelPosition=center;verticalLabelPosition=top;verticalAlign=bottom;" parent="1" vertex="1">
+                    <mxGeometry x="920" y="236.66" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=14;fontColor=#e6e8ea;startArrow=classic;startFill=1;dashed=1;dashPattern=12 12;" parent="1" source="38" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="890" y="690"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="38" value="ViaCep" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=api;labelBackgroundColor=none;fontSize=14;fontColor=#e6e8ea;" parent="1" vertex="1">
+                    <mxGeometry x="925" y="440" width="70" height="68" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;fontSize=14;fontColor=#e6e8ea;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="650" y="540" as="sourcePoint"/>
+                        <mxPoint x="650" y="160" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="44" value="Solução na AWS" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=16;fontColor=#e6e8ea;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="230" y="150" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="Solução com Spring" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=16;fontColor=#e6e8ea;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="870" y="150" width="165" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

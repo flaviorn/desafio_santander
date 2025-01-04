@@ -1,0 +1,28 @@
+{
+    "request": {    
+        "method": "GET",
+        "url": "/12305010/json"
+    },
+    
+    "response": {
+        "status": 200,
+        "jsonBody": {
+            "cep": "12305-010",
+            "logradouro": "Avenida Getúlio Vargas",
+            "complemento": "de 1927/1928 ao fim",
+            "unidade": "",
+            "bairro": "Jardim Califórnia",
+            "localidade": "Jacareí",
+            "uf": "SP",
+            "estado": "São Paulo",
+            "regiao": "Sudeste",
+            "ibge": "3524402",
+            "gia": "3920",
+            "ddd": "12",
+            "siafi": "6589"
+          },
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}
