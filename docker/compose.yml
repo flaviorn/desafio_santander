@@ -1,0 +1,26 @@
+services:
+  mysql:
+    image: mysql
+    container_name: mysql_desafio_santander
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: desafio_santander
+      MYSQL_USER: santander
+      MYSQL_PASSWORD: 123456
+    ports:
+      - "3310:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./mysql:/docker-entrypoint-initdb.d
+
+  wiremock:
+    image: wiremock/wiremock:latest
+    container_name: wiremock_desafio_santander
+    ports:
+      - "9090:8080"
+    volumes:
+      - ./wiremock/mappings:/home/wiremock/mappings
+      - ./wiremock/__files:/home/wiremock/__files
+
+volumes:
+  mysql_data:
